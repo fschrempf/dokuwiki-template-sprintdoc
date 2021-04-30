@@ -143,7 +143,7 @@ $classWideContent = ($ACT === "show") ? "": "wide-content ";
                                 <h5 class="sr-only" role="heading" aria-level="2"><?php echo tpl_getLang('head_menu_tool-select') ?></h5>
                                 <?php
                                 if (file_exists(DOKU_INC . 'inc/Menu/MobileMenu.php')) {
-                                    echo (new \dokuwiki\Menu\MobileMenu())->getDropdown();
+                                    echo (new \dokuwiki\Menu\MobileMenu())->getDropdown(tpl_getLang('head_menu_tool-select'));
                                 } else {
                                     //Pre-Greebo Backwards compatibility
                                     tpl_actiondropdown($lang['tools'], "test");
